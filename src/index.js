@@ -16,8 +16,8 @@ export class FirebaseAuth {
     validateAuthData(authData, options) {
         return admin.auth().verifyIdToken(authData.access_token)
             .then(function (decodedToken) {
-                if (decodedToken && decodedToken.uid == authData.id) {
-                    return;                    
+                if (decodedToken && decodedToken.uid === authData.uid) {
+                    return;
                 }
 
                 throw new Parse.Error(Parse.Error.OBJECT_NOT_FOUND, 'Firebase auth not found for this user.');
