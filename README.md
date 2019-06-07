@@ -39,7 +39,7 @@ curl -X POST \
     "authData": {
     	"firebase": {
     		"access_token": "{{access_token}}",
-    		"id": "{{FirebaseUID}}"
+    		"uid": "{{FirebaseUID}}"
     	}
     }
 }'
